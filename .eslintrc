@@ -1,0 +1,31 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true
+  },
+  "extends": "@antfu/eslint-config-basic",
+  "overrides": [],
+  "plugins": [
+    // "antfu"
+  ],
+  //解析器选项
+  "parserOptions": {
+      "ecmaVersion": "latest",
+      //源类型
+      "sourceType": "module"
+  },
+  "rules": {
+    // enable additional rules
+    // "semi": ["erro","always"],
+    "array-callback-return":"error",
+    "camelcase":"off",
+
+      
+    // override configuration set by extending "@antfu"
+    //覆盖通过扩展 "@antfu/eslint-config-basic" 设置的配置。
+    "no-console":["error", { "allow": ["warn", "error", "log"] }],
+    "antfu/top-level-function":"error",
+    "no-var": "error"
+  },
+  "ignorePatterns": ["index.html","package.json"]
+}

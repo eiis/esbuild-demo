@@ -2,14 +2,22 @@
   "name": "esbuild-demo",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild --format=cjs ./src/main.js --bundle --outdir=dist"
+    "build": "esbuild --format=cjs ./src/main.js --bundle --outdir=dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "0.19.2"
+    "esbuild": "0.19.2",
+    "espree": "^9.6.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
+    "eslint": "^8.48.0"
   }
 }
