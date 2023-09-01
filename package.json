@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild --format=cjs ./src/main.js --bundle --outdir=dist",
+    "build": "esbuild --format=esm ./src/main.js --bundle --outdir=dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
